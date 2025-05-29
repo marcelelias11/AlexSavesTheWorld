@@ -42,9 +42,11 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.System.Acts.SetVar,
 		C3.Plugins.System.Acts.SubVar,
 		C3.Plugins.Text.Acts.SetText,
+		C3.Plugins.Audio.Acts.Stop,
 		C3.Plugins.progressbar.Acts.SetMaximum,
 		C3.Plugins.Sprite.Acts.SetScale,
-		C3.Plugins.System.Acts.ResetEventVar
+		C3.Plugins.System.Acts.ResetEventVar,
+		C3.Plugins.System.Acts.Wait
 	];
 };
 self.C3_JsPropNameTable = [
@@ -123,10 +125,13 @@ self.C3_JsPropNameTable = [
 	{Áudio: 0},
 	{alert: 0},
 	{boasVindas: 0},
+	{limpo: 0},
+	{btn_play2: 0},
 	{LixosColetados: 0},
 	{ArvorePlantada: 0},
 	{TempoRestante: 0},
-	{Pontos: 0}
+	{Pontos: 0},
+	{faseFinalizada: 0}
 ];
 
 self.InstanceType = {
@@ -191,5 +196,7 @@ self.InstanceType = {
 	FundoBlocoFase3: class extends self.ITiledBackgroundInstance {},
 	Áudio: class extends self.IInstance {},
 	alert: class extends self.ITextInstance {},
-	boasVindas: class extends self.ITextInstance {}
+	boasVindas: class extends self.ITextInstance {},
+	limpo: class extends self.ISpriteInstance {},
+	btn_play2: class extends self.ISpriteInstance {}
 }
